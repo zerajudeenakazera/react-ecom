@@ -15,7 +15,7 @@ pipeline{
         stage('deploy to eks'){
             steps{
                 sh 'echo deploying to eks'
-                sh 'aws eks update-kubeconfig --region ap-south1 --name democluster'
+                sh 'aws eks update-kubeconfig --region ap-south-1 --name democluster'
                 sh 'kubectl apply -f deployment.yaml --validate=false'
                 sh 'kubectl apply -f service.yaml'
             }
