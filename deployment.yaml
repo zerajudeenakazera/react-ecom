@@ -1,0 +1,21 @@
+apiversion: apps/v1
+kind: Deployment
+metadata:
+  name: myreactapplication
+  lables:
+    app: react-app
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: react-app
+  template:
+    metadata:
+      lables:
+        app: react-app
+    spec:
+      containers:
+        - name: myapp-container
+          image: zera18/react-ecom-app-dev
+          ports:
+            - containerPort: 80
