@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myreactapplication
-  lables:
+  labels:
     app: react-app
 spec:
   replicas: 4
@@ -11,7 +11,7 @@ spec:
       app: react-app
   template:
     metadata:
-      lables:
+      labels:
         app: react-app
     spec:
       containers:
