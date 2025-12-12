@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('git checkout'){
             steps{
-                git url: 'https://github.com/zerajudeenakazera/react-ecom.git'
+                git url: 'https://github.com/zerajudeenakazera/react-ecom.git', branch: 'main'
             }
         }
         stage('docker build'){
